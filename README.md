@@ -13,6 +13,26 @@
 <tbody>
 <tr>
 <td>19.4.15</td>
+<td>[5%]</td>
+<td><a href="https://github.com/chokcoco/iCSS">谈谈一些有趣的 CSS 话题</a></td>
+</tr>
+<tr>
+<td></td>
+<td>[ ]</td>
+<td><a href="https://github.com/yangshun/front-end-interview-handbook">front-end-interview-handbook -- 几乎完整的答案，您可以用来面试潜在的候选人，测试自己或完全忽略“前端工作面试问题”</a></td>
+</tr>
+<tr>
+<td></td>
+<td>[ ]</td>
+<td><a href="https://github.com/leonardomso/33-js-concepts">33-js-concepts -- 每个JavaScript开发人员应该知道33个概念。</a></td>
+</tr>
+<tr>
+<td></td>
+<td>[ ]</td>
+<td><a href="http://liubin.org/promises-book/" rel="nofollow">JavaScript Promise迷你书</a></td>
+</tr>
+<tr>
+<td></td>
 <td>[ ]</td>
 <td><a href="http://blog.csdn.net/lihongxun945/article/category/7259172" rel="nofollow">阅读八小时撸简易vuejs</a></td>
 </tr>
@@ -34,17 +54,7 @@
 <tr>
 <td></td>
 <td>[ ]</td>
-<td><a href="http://liubin.org/promises-book/" rel="nofollow">JavaScript Promise迷你书</a></td>
-</tr>
-<tr>
-<td></td>
-<td>[ ]</td>
 <td><a href="https://github.com/Chalarangelo/30-seconds-of-code">30-seconds-of-code</a></td>
-</tr>
-<tr>
-<td></td>
-<td>[ ]</td>
-<td><a href="https://github.com/chokcoco/iCSS">谈谈一些有趣的 CSS 话题</a></td>
 </tr>
 <tr>
 <td></td>
@@ -75,11 +85,6 @@
 <td></td>
 <td>[  ]</td>
 <td><a href="https://github.com/Roshanjossey/first-contributions">first-contributions -- 一个让初学者贡献开源的项目</a>可以说是一个详细的贡献开源的教程</td>
-</tr>
-<tr>
-<td></td>
-<td>[ ]</td>
-<td><a href="https://github.com/yangshun/front-end-interview-handbook">front-end-interview-handbook -- 几乎完整的答案，您可以用来面试潜在的候选人，测试自己或完全忽略“前端工作面试问题”</a></td>
 </tr>
 <tr>
 <td></td>
@@ -130,11 +135,6 @@
 <td></td>
 <td>[ ]</td>
 <td><a href="https://github.com/wxyyxc1992/Web-Series">Web-Series -- 现代 Web 开发，现代 Web 开发导论</a>Web 开发，入门易，深度难，分为初窥门径、登堂入室、融会贯通等阶段。本仓库存放 ITCS 技术体系与知识图谱-Web 前端相关领域的 Web 开发基础与工程实践的相关博客、示例代码与开源项目、整理成的系列书籍等内容；目前为了更好地体系化阅读，笔者将所有的内容规整到了不同的系列文章 / 书籍中。</td>
-</tr>
-<tr>
-<td></td>
-<td>[ ]</td>
-<td><a href="https://github.com/leonardomso/33-js-concepts">33-js-concepts -- 每个JavaScript开发人员应该知道33个概念。</a></td>
 </tr>
 <tr>
 <td></td>
