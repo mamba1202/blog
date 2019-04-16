@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #qq {
+            width: 200px;
+            height: 400px;
+            background: #f9c;
+        }
+
+        #title {
+            width: 240px;
+            height: 180px;
+            background: #fc6;
+            position: absolute;
+            top: 10px;
+            left: 220px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="qq"></div>
+    <div id="title"></div>
+    <script>
+        function $(v) {
+            if (typeof v === 'function') {
+                window.onload = v
+            } else if (typeof v === 'string') {
+                return document.getElementById(v)
+            } else if (typeof v === 'object') {
+                return v
+            }
+        }
+
+        $(function () {
+            var qq = $('qq')
+            var title = $('title')
+            var timer = null
+            qq.onmouseover = show;
+            qq.onmouseout = hide;
+
+            title.onmouseover = show;
+            title.onmouseout = hide;
+
+            function show() {
+                clearInterval(timer) //砸掉qq.onmouserover=show
+                title.style.display = 'block';
+            }
+            function hide() {
+                timer = setInterval(function () {
+                    title.style.display = 'none';
+                }, 1000)
+            }
+        })
+
+        //onmousedown--开定时器
+        //onmouseup--关定时器
+    </script>
+</body>
+
+</html>
