@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 500px;
+        }
+
+        #img2 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 750px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/1.jpg" id="img1" alt="图片">
+    <img src="img/2.jpg" id="img2" alt="图片">
+    <script>
+        function getStyle(obj, attr) {
+            return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr]
+        }
+
+        window.onload = function () {
+            // var oImg = document.getElementById('img1')
+            // oImg.onclick = function () {
+            //     shake(oImg,'left',function(){alert(1)})
+            // }
+
+            var oImg1 = document.getElementById('img1')
+            var oImg2 = document.getElementById('img2')
+            // oImg1.onclick = function(){
+            //     var _this = this
+            //     shake(_this,'left',function(){
+            //         shake(_this,'top')
+            //     })
+            // }
+            // oImg2.onclick = function(){
+            //     var _this = this
+            //     shake(_this,'left',function(){
+            //         shake(_this,'top')
+            //     })
+            // }
+
+            function fnShack() {
+                var _this = this
+                shake(_this, 'left', function () {
+                    shake(_this, 'top')
+                })
+            }
+            oImg1.onclick = fnShack
+            oImg2.onclick = fnShack
+        }
+
+        function shake(obj, attr, endFn) {
+            var pos = parseInt(getStyle(obj, attr))
+            var arr = []   //20,-20,18,-18...0
+            var num = 0
+            for (var i = 20; i > 0; i -= 2) {
+                arr.push(i, -i)
+            }
+            arr.push(0)
+            //alert(arr)
+            clearInterval(obj.shakeTimer)
+            obj.shakeTimer = setInterval(function () {
+                obj.style[attr] = pos + arr[num] + 'px'
+                num++
+                if (num === arr.length) {
+                    clearInterval(obj.shakeTimer)
+                    endFn && endFn()
+                }
+            }, 50)
+        }
+    </script>
+</body>
+
+</html>
