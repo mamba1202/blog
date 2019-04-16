@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数返回值return</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="按钮" />
+    <div id="div1">1234</div>
+    <script>
+       // return 返回值
+       // 数字，字符串，布尔，函数，对象（元素 / [] / {} / null）, 未定义
+
+        window.onload = function () {
+            //var Btn = document.getElementById('btn1');
+            //var Div = document.getElementById('div1');
+            getId('btn1').onclick = function () {
+                alert(getId('div1').innerHTML)
+            }
+        }
+        function getId(id) {
+            return document.getElementById(id)
+
+        }
+
+        $(function () {
+            $('btn1').onclick = function () {
+                $(this).style.background = 'blue'
+            }
+        })
+
+        function $(v) {
+            if (typeof v === 'function') {
+                window.onload = v
+            } else if (typeof v === 'string') {
+                return document.getElementById(v)
+            } else if (typeof v === 'object') {
+                return v
+            }
+        }
+
+        function fn1(n) {
+            var arr = []
+            for (var i = 1; i <= n; i++) {
+                arr.push(i)
+            }
+            return arr
+        }
+        alert(fn1(7))  //[1,2,3,4,5,6,7]
+        alert(fn1(9))  //[1,2,3,4,5,6,7,8,9]
+
+
+        function fn2() {
+            return window
+        }
+        alert(fn2())
+
+
+        function fn3() {
+            return
+        }
+        alert(fn3())
+
+
+        function fn4() {
+            return 987
+
+            alert(123)
+        }
+        alert(fn4())
+
+        // return: 返回值
+        // 1. 函数名+(): fn1()==> return 后面的值；
+        // 2. 所有函数默认返回值： 未定义(undefined)；
+        // 3. return后面的任何代码都不执行了；
+
+    </script>
+</body>
+
+</html>
