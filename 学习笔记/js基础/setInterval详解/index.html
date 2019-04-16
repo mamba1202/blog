@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setInterval详解，定时器管理，背景选择实例</title>
+</head>
+
+<body>
+    <input type="button" value="换背景">
+    <input type="button" value="停止">
+    <script>
+        /*
+        定时器：时间概念
+        setInterval(函数，毫秒)； 重复执行
+        clearInterval(timer)     清除
+        */
+        //for (var i = 0; i < 3; i++) { document.title = i } --瞬间完成,没有时间依据
+        //fn1()--直接调用
+        //document.onclick = fn1 --事件调用
+        // var i = 0
+        // var timer = null
+        // function fn1() {
+        //     document.title = i
+        //     i++
+        //     if (i === 10) {
+        //       clearInterval(timer)
+        //     }
+
+        // }
+        // timer = setInterval(fn1, 1)
+
+        var aBtn = document.getElementsByTagName('input')
+        var arrUrl = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.png',]
+        var num = 0
+        var timer = null
+
+        var oBody = document.body
+
+        aBtn[0].onclick = function () {
+            clearInterval(timer) //开始就砸掉之前的闹钟
+            timer = setInterval(function () {
+                oBody.style.background = 'url(' + arrUrl[num] + ')'
+                num++
+                num %= arrUrl.length
+            }, 1000)
+        }
+        aBtn[1].onclick = function () {
+            clearInterval(timer)
+        }
+    </script>
+</body>
+
+</html>
