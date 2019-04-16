@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 650px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/1.jpg" id="img1" alt="图片">
+    <script>
+        function getStyle(obj, attr) {
+            return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr]
+        }
+
+        window.onload = function () {
+            var oImg = document.getElementById('img1')
+            oImg.onclick = function () {
+                var pos = parseInt(getStyle(oImg, "left"))
+                var arr = []   //20,-20,18,-18...0
+                var num = 0
+                var timer = null
+                for (var i = 20; i > 0; i -= 2) {
+                    arr.push(i, -i)
+                }
+                arr.push(0)
+                //alert(arr)
+
+                clearInterval(timer)
+                timer = setInterval(function () {
+                    oImg.style.left = pos + arr[num] + 'px'
+                    num++
+                    if(num === arr.length){
+                        clearInterval(timer)
+                    }
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
