@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function () {
+        var oUl = document.getElementById('list')
+        var aUl = oUl.getElementsByTagName('ul')
+        var len = aUl.length
+        var aLi = null
+
+        for (var i = 0; i < len; i++) {
+            aLi = aUl[i].getElementsByTagName('li')
+
+            for (var j = 0; j < aLi.length; j++) {
+                aLi[j].style.border = '1px solid red'
+            }
+        }
+    }
+</script>
+
+<body>
+    <ul id="list">
+        <li>
+            <h2>分组一</h2>
+            <ul>
+                <li>湖人</li>
+                <li>火箭</li>
+                <li>马刺</li>
+            </ul>
+        </li>
+        <li>
+            <ol>
+                <li>no</li>
+                <li>no</li>
+                <li>no</li>
+            </ol>
+        </li>
+        <li>
+            <h2>分组二</h2>
+            <ul>
+                <li>猛龙</li>
+                <li>奇才</li>
+            </ul>
+        </li>
+        <li>
+            <ol>
+                <li>no</li>
+                <li>no</li>
+            </ol>
+        </li>
+        <li>
+            <h2>分组三</h2>
+            <ul>
+                <li>开拓者</li>
+            </ul>
+        </li>
+        <li>
+            <ol>
+                <li>no</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+
+</html>
