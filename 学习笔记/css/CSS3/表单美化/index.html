@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        #mask {
+            height: 100%;
+            background: url(img/wall.jpg);
+            background-size: cover;
+            /*cover 覆盖会铺满当前的屏幕*/
+            filter: blur(5px);
+        }
+
+        .drog {
+            height: 640px;
+            width: 520px;
+            background: rgba(255, 255, 255, .5);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -260px;
+            margin-top: -320px;
+            border: 1px solid #fff;
+            background-clip: content-box;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            margin: 24px 0;
+            display: flex;
+        }
+
+        .title .title_name {
+            padding: 0 20px;
+        }
+
+        .title .line {
+            background: linear-gradient(transparent 49%,
+                #000 49%,
+                #000 54%,
+                transparent 51%);
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .td_left {
+            width: 150px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mask"></div>
+    <div class="drog">
+        <h2 class="title">
+            <span class="line"></span>
+            <span class="title_name"> 用户注册</span>
+            <span class="line"></span>
+        </h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="td_left">姓名：</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td class="td_left">密码：</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td class="td_left">确认密码：</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td class="td_left">性别：</td>
+                    <td>
+                        <input type="radio" name="gender">男
+                        <input type="radio" name="gender">女
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">喜爱的菜系：</td>
+                    <td>
+                        <input type="checkbox" name="food">川菜
+                        <input type="checkbox" name="food">湘菜
+                        <input type="checkbox" name="food">粤菜
+                        <input type="checkbox" name="food">浙菜
+                        <input type="checkbox" name="food">苏菜
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">个人简介：</td>
+                    <td>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left"></td>
+                    <td>
+                        <input type="submit">
+                        <input type="reset">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
