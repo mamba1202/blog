@@ -27,7 +27,7 @@
         window.onload = function () {
             var oImg = document.getElementById('img1')
             oImg.onclick = function () {
-                var pos = parseInt(getStyle(oImg, "left"))
+                var pos = parseInt(getStyle(oImg, "left"))  //有bug
                 var arr = []   //20,-20,18,-18...0
                 var num = 0
                 var timer = null
