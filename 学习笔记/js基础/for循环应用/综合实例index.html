@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成一组新闻</title>
+</head>
+<script>
+    window.onload = function () {
+        var oBtn = document.getElementById('btn1')
+        var oUl = document.getElementById('list')
+        var arr = [
+            '网传陕西"退金融服务费不限时间、品牌" 官方声明',
+            '当事人回应工人安全帽“一碰就碎”视频：自己买的',
+            '北京：今年高考一二本合并 艺术类招生实行分段录取',
+            '省纪委表扬过的廉政典型被调查',
+            '河北邯郸市政府成立调查组对曲周县“袁府”展开调查',
+        ]
+        var onOff = true
+        oBtn.onclick = function () {
+            //oBtn.disabled = true
+            //oBtn.style.display = 'none'
+            //oUl.innerHTML = ''
+
+            if (onOff) {
+                // onOff = false
+                for (var i = 0; i < arr.length; i++) {
+                    oUl.innerHTML += '<li>' + arr[i] + '</li>'
+                }
+                onOff = false
+            }
+            // onOff = false
+        }
+
+    }
+</script>
+
+<body>
+    <input id="btn1" type="button" value="自动生成5条新闻">
+    <ul id="list"></ul>
+</body>
+
+</html>
