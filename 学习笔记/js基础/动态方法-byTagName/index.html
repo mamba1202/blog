@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+  <ul id="list">
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+  <ul>
+      <li></li>
+  </ul>
+  <script>
+//   #list{}  var oUl = document.getElementById('list')     --静态方法
+
+//   li{}  document.getElementsByTagName('li')               --动态方法
+//   #list li{}  var aLi = document.getElementsByTagName('li')
+
+//               //aLi =>[li,li,li]元素的集合
+//               aLi length
+//               aLi[0]
+//               //再用tagName时必须要加上:[]
+
+window.onload = function(){
+    var oUl = document.getElementById('list')
+    var oUl = document.getElementsByTagName('ul')[0]
+    var aLi = oUl.getElementsByTagName('li')
+}
+  </script>
+</body>
+</html>
