@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+
+// search 的写法： 字符串.search(正则)
+// 默认 ： 区分大小写
+// 如果不区分大小写的话，在正则的最后加标识 i
+
+var str = 'abcdef'
+//var re =/b/
+
+var re =/B/i
+//var re = new RegExp('B','i')
+
+
+alert(str.search(re))
+</script>
+<body>
+    
+</body>
+</html>
