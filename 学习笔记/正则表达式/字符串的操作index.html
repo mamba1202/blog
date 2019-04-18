@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+
+    var str = 'hai123shhshb54xbjasbjxb33bxshbhj879'
+     
+    //  传统方式
+    // function findNum(str) {
+    //     var arr = []
+    //     var tmp = []
+
+    //     for (var i = 0; i < str.length; i++) {
+    //         if (str.charAt(i) <= '9' && str.charAt(i) >= '0') {
+    //             tmp += str.charAt(i)
+    //         } else {
+    //             if (tmp) {
+    //                 arr.push(tmp)
+    //                 tmp = ''
+    //             }
+    //         }
+    //     }
+    //     if (tmp) {
+    //                 arr.push(tmp)
+    //                 tmp = ''
+    //             }   //最后数字不会走if ,所以重新执行if
+    //     return arr
+    // }
+
+    //正则
+    function findNum(str){
+        return str.match(/\d+/g)
+    }
+    alert(findNum(str))   //[123,54,33,879]
+</script>
+
+<body>
+
+</body>
+
+</html>
