@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!--<script>
+    // window.onload = function () {
+    //     //根据数字返回指定字符
+    //     var str = ''
+    //     for (var i = 0; i < 1000; i++) {
+    //         str += String.fromCharCode(i) + ''
+    //     }
+    //     document.body.innerHTML = str
+    // }   
+
+
+
+</script>
+-->
+
+<body>
+    <input type="text">
+    <input type="button" value="加密">
+    <div id="div1">加密...</div>
+
+    <script>
+        var alnp = document.getElementsByTagName('input')
+        var oDiv = document.getElementById('div1')
+
+        alnp[1].onclick = function () {
+            var str = alnp[0].value
+            var str1 = ''
+            for (var i = 0; i < str.length; i++) {
+                //str1 += str.charCodeAt(i) + ':'
+                str1 += String.fromCharCode( str.charCodeAt(i)-520)
+            }
+            oDiv.innerHTML = str1
+        }
+    </script>
+</body>
+
+</html>
