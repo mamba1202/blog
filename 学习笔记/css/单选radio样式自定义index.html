@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    input{
+        display: none;
+    }
+    label:before{
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border: 1px solid red;
+        border-radius:  50%;
+        padding: 2px;   
+    }
+    input:checked+label:before{
+        background: red;
+        background-clip: content-box;
+    }
+    </style>
+</head>
+<body>
+    <input type="radio" id="man" name="gender" checked>
+    <label for="man">男</label>
+    <input type="radio" id="woman" name="gender">
+    <label for="woman">女</label>
+</body>
+</html>

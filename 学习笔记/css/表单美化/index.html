@@ -71,6 +71,61 @@
             width: 150px;
             text-align: right;
         }
+
+        input {
+            outline: none;
+            margin-bottom: 5px;
+        }
+
+        .input1:last-child {
+            margin-bottom: 10px;
+        }
+
+        .input1 {
+            border: none;
+            height: 40px;
+            border-bottom: 2px solid #000;
+            transition: .5s;
+            background: inherit;
+        }
+
+        .input1:focus {
+            border-bottom-color: #117, 117, 117;
+        }
+
+        .input1::-webkit-input-placeholder {
+            transition: .5s;
+            transform-origin: left top;
+            padding-left: 10px;
+        }
+
+        .input1::-moz-placeholder {
+            transition: .5s;
+            transform-origin: left top;
+            padding-left: 10px;
+        }
+
+        .input1:-ms-input-placeholder {
+            transition: .5s;
+            transform-origin: left top;
+            padding-left: 10px;
+        }
+
+        .input1:focus::-webkit-input-placeholder {
+            transform: scale(0.7) translateY(-10px)
+        }
+
+        .input1:focus::-moz-placeholder {
+            transform: scale(0.7) translateY(-10px)
+        }
+
+        .input1:-ms-input-placeholder {
+            transform: scale(0.7) translateY(-10px)
+        }
+
+        input .sub {
+            border: 1px solid red;
+        }
     </style>
 </head>
 
@@ -86,15 +141,15 @@
             <tbody>
                 <tr>
                     <td class="td_left">姓名：</td>
-                    <td><input type="text"></td>
+                    <td><input class="input1" type="text" placeholder="4-12个字符"></td>
                 </tr>
                 <tr>
                     <td class="td_left">密码：</td>
-                    <td><input type="password"></td>
+                    <td><input class="input1" type="password" placeholder="请输入密码"></td>
                 </tr>
                 <tr>
                     <td class="td_left">确认密码：</td>
-                    <td><input type="password"></td>
+                    <td><input class="input1" type="password" placeholder="请再次输入密码"></td>
                 </tr>
                 <tr>
                     <td class="td_left">性别：</td>
