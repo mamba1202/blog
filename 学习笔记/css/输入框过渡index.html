@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            outline: none;
+        }
+
+        .input1 {
+            border: none;
+            height: 50px;
+            border-bottom: 2px solid #000;
+            transition: .5s;
+        }
+
+        .input1:focus {
+            border-bottom-color: red;
+        }
+        .input1::-webkit-input-placeholder{
+            transition: .5s;
+            transform-origin: left top;
+        }
+        .input1:focus::-webkit-input-placeholder{
+            transform: scale(0.7) translateY(-10px)
+        }
+    </style>
+</head>
+
+<body>
+    <input class="input1" type="text" placeholder="4-12个字符">
+</body>
+
+</html>
