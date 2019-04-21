@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            border: 10px solid #ccc;
+            background: #ffc;
+            width: 400px;
+            padding: 20px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <input type="button" value="查找">
+    <input type="text">
+    <input type="button" value="替换">
+
+    <p>Vue 提供了一种更通用的方式来观察和响应 Vue 实例上的数据变动：侦听属性。<br>
+        当你有一些数据需要随着其它数据变动而变动时，你很容易滥用 watch——特别是如果你之前使用过AngularJS <br>
+        然而，通常更好的做法是使用计算属性而不是命令式的 watch 回调。细想一下这个例子：</p>
+    <script>
+        var alnp = document.getElementsByTagName('input')
+        var oP = document.getElementsByTagName('p')[0]
+
+        alnp[1].onclick = function () {
+            var str = alnp[0].value
+            if(!str)return
+            oP.innerHTML= oP.innerHTML.split(str).join('<span>'+str+'</span>')
+        }
+        alnp[3].onclick = function () {
+            var str = alnp[0].value
+            var newStr = alnp[2].value
+            if(!str)return
+            oP.innerHTML= oP.innerHTML.split(str).join('<span>'+newStr+'</span>')
+            //alnp[2].value = ''
+        }
+    </script>
+</body>
+
+</html>
