@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<script>
+    window.onload = function () {
+
+        var oP = document.getElementsByTagName('p')[0]
+        var oSpan = document.getElementsByTagName('span')[0]
+        var oA = document.getElementsByTagName('a')[0]
+        var str = oSpan.innerHTML
+        var onOff = true
+        oA.onclick = function () {
+            if (onOff) {
+                oSpan.innerHTML = str.substring(0, 35)
+                oA.innerHTML = ">>展开"
+            } else {
+                oSpan.innerHTML = str.substring(0)
+                oA.innerHTML = ">>收缩"
+            }
+            onOff = !onOff
+        }
+    }
+</script>
+
+<body>
+
+    <p><span>Vue 提供了一种更通用的方式来观察和响应 Vue 实例上的数据变动：
+            侦听属性。当你有一些数据需要随着其它数据变动而变动时，
+            你很容易滥用 watch——特别是如果你之前使用过 AngularJS
+            。然而，通常更好的做法是使用计算属性而不是命令式的 watch 回调
+            细想一下这个例子：Vue 提供了一种更通用的方式来观察和响应 Vue 实例上的数据变
+            动：侦听属性。当你有一些数据需要随着其它数据变动而变动时，
+            你很容易滥用 watch——特别是如果你之前使用过 AngularJS。然而，
+            通常更好的做法是使用计算属性而不是命令式的 watch 回调。
+            细想一下这个例子：</span>......<a href="javascript:;"> >>收缩</a></p>
+
+
+    <!--<script>
+    // var str = '在这个示例中，使用 watch 选项允许我们执行异步操作 (访问一个 API)，限制我们执行该操作的频率，并在我们得到最终结果前，设置中间状态。这些都是计算属性无法做到的。'
+    
+    // alert(str.substring(0,2))
+    // alert(str.substring(2,0))  =>可以检测两个数，大的往后扔，小的往前扔
+    // alert(str.substring(-3,2)) => -3当成0处理
+    // alert(str.substring(2,-3))
+
+    // alert(str.slice(2,0)) =>不交换位置
+    // alert(str.slice(-4，-2))  =>0-- -4从后面倒着往前数
+
+    </script>
+    -->
+</body>
+
+</html>
