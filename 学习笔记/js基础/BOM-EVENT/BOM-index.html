@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="打开新窗口">
+    <input type="button" value="关闭窗口">
+    <input type="button" value="关闭窗口">
+
+    <script>
+        /*
+        open（页面的地址url，打开的方式） 方法   打开一个新的窗口（页面）
+        如果url为空，则默认打开一个空白页面
+        如果打开方式为空，默认为新窗口方式打开
+    
+        返回值： 返回新打开窗口的window对象
+        */
+
+        var aInput = document.getElementsByTagName('input')
+        var opener = null
+        aInput[0].onclick = function () {
+            //window.open('http://www.baidu.com','_self')
+            opener = window.open()
+            //alert(opener==window)
+            //opener.document.body.style.background = 'red' 跨域问题
+        }
+
+        /*
+        close() 关闭窗口
+        */
+        aInput[1].onclick = function () {
+            window.close()
+            /*
+            1.ff: 默认无法关闭
+            2.chrome： 默认关闭
+            3.ie： 询问用户是饭关闭
+            */
+        }
+
+        aInput[2].onclick = function () {
+            opener.close() //可以关闭本窗口通过js方法打开的新窗口
+        }
+
+        //alert(window.navigator.userAgent)
+        //window.navigator.userAgent---浏览器信息
+
+        /*if(window.navigator.userAgent.indexOf('MSIE')!=-1){
+            alert('我是ie')
+        }else{
+            alert('我不是ie')
+        }*/
+
+        //alert(window.location)浏览器地址信息
+       // window.location.href: url
+       //window.location.search: url?后边的内容
+       //window.location.hash: url#后边的内容
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.documentElement =>文档元素
+         可视区尺寸
+         document.documentElement.clientHeight
+         document.documentElement.clientWidth
+         
+        alert(document.documentElement.clientHeight)
+        alert(document.documentElement.clientWidth)
+
+        滚动条滚动距离
+        document.documentElement.scrollTop[screenLeft]
+        document.body.scrollTop[screenLeft]
+
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+        alert(scrollTop)
+
+        内容高 oDiv.scrollHeight(width)
+        document.body.offsetHeight
+
+        文档高 offsetHeight
+
+        onscroll: 当滚动条滚动的时候触发（时间间隔触发）
+        onresize: 当窗口大小发生改变的时候触发（时间间隔触发）
+    </script>
+</body>
+
+</html>
