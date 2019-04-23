@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 30px;
+            height: 500px;
+            background: black;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        #div2 {
+            width: 30px;
+            height: 30px;
+            background: gold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #div3 {
+            width: 50px;
+            background: gold;
+            position: absolute;
+            left: 50px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+    <div id="div3"></div>
+    <script>
+        var oDiv1 = document.getElementById('div1')
+        var oDiv2 = document.getElementById('div2')
+        var oDiv3 = document.getElementById('div3')
+
+        var iMaxTop = oDiv1.offsetHeight - oDiv2.offsetHeight
+
+        oDiv2.onmousedown = function (event) {
+            var ev = ev || event
+            var disY = ev.clientY - this.offsetTop
+
+            document.onmousemove = function (ev) {
+                var ev = ev || event
+                var T = ev.clientY - disY
+                if (T < 0) {
+                    T = 0
+                } else if (T > iMaxTop) {
+                    T = iMaxTop
+                }
+                oDiv2.style.top = T + 'px'
+
+                var iScale = T / iMaxTop
+                document.title = iScale
+                oDiv3.style.height = 500 * iScale + 'px'
+            }
+
+            document.onmouseup = function () {
+                document.onmousemove = document.onmouseup = null
+            }
+        }
+    </script>
+</body>
+
+</html>
