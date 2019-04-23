@@ -120,6 +120,8 @@
             document.onmousemove = function (ev) {
                 var ev = ev || event
                 var T = ev.clientY - disY
+
+                //限制范围
                 if (T < 0) {
                     T = 0
                 } else if (T > iMaxTop) {
@@ -128,7 +130,7 @@
                 oDiv2.style.top = T + 'px'
 
                 var iScale = T / iMaxTop
-                document.title = iScale
+                //document.title = iScale
                 // oDiv3.style.height = 500 * iScale + 'px'
                 oDiv4.style.top = (oDiv3.clientHeight - oDiv4.offsetHeight) * iScale + 'px'
             }
