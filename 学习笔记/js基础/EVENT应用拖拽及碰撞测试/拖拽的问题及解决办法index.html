@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    zxcxvcb
+    <div id="div1"></div>
+    <script>
+        // 拖拽的时候如果有文字被选中。会产生问题
+        // 原因： 当鼠标按下的时候。如果页面中有文字被选中，那么会触发浏览器默认拖拽文字的效果--发生冲突
+        // 阻止默认行为 - 解决问题： return false
+        //图片拖拽原因解决办法同上
+        //标准： return false
+        //非标准ie： 全局捕获
+        var oDiv = document.getElementById('div1')
+        oDiv.onmousedown = function (ev) {
+
+            // if (oDiv.setPointerCapture) {
+            //     oDiv.setPointerCapture()
+            // }
+
+            var disX = ev.clientX - this.offsetLeft
+            var disY = ev.clientY - this.offsetTop
+            document.onmousemove = function (ev) {
+                var ev = ev || event
+
+                oDiv.style.left = ev.clientX - disX + 'px'
+                oDiv.style.top = ev.clientY - disY + 'px'
+            }
+            document.onmouseup = function () {
+                document.onmousemove = document.onmouseup = null
+                //释放全局捕获
+                // if (oDiv.releasePointerCapture) {
+                //     oDiv.releasePointerCapture()
+                // }
+            }
+            return false
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
