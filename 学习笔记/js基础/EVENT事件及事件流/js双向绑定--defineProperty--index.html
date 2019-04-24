@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>使用Object.defineProperty实现简单的双向数据绑定</title>
+</head>
+
+<body>
+    <input type="text" id="input" />
+    <div id="div"></div>
+    <script>
+        var obj = {};
+        var inputVal = document.getElementById("input");
+        var div = document.getElementById("div");
+
+        Object.defineProperty(obj, "name", {
+            set: function (newVal) {
+                inputVal.value = newVal;
+                div.innerHTML = newVal;
+            }
+        });
+        inputVal.addEventListener('input', function (e) {
+            obj.name = e.target.value;
+        });
+    </script>
+</body>
+
+</html>
