@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //function fn(a=10) {
+            //let a =100  不能重复声明
+            //a的默认值为10
+            //a = a || 10  0为false 慎用
+           // console.log(a)
+        //}
+        //fn()
+
+        function fn(...arr){  //rest参数直接把实参放在数组中
+            //console.log(arguments)
+            //console.log(arr.push)
+        }
+        function fn1(a,...arr){  //rest参数直接把实参放在数组中
+            //console.log(arguments)
+            console.log(a)
+        }
+        fn1(1)
+        fn1(1,2)
+        fn1(1,2,3)
+    </script>
+</body>
+
+</html>

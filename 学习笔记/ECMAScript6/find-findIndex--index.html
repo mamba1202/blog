@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //arr.find()
+        //在数组中找到符合条件的第一个成员--没有符合条件的返回undefin
+
+        //arr.findIndex()
+        //在数组中找到符合条件的第一个成员位置
+
+        //这两个方法都可以发现NaN，弥补了数组的IndexOf方法的不足。
+        //indexOf方法无法识别数组的NaN成员，但是findIndex方法可以借助Object.is方法做到。
+
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+        var newArr = arr.find(function (item, index) {
+            return item < 3
+        })
+        console.log(newArr)
+
+        var newArr1 = arr.findIndex(function (item, index) {
+            return item < 3
+        })
+        console.log(newArr1)
+
+    </script>
+</body>
+
+</html>

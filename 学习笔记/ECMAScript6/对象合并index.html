@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对象合并
+        //Object.assign(target,[要合并的对象1，要合并的对象2......])
+
+        var o = { a: 1 }
+        var o1 = { b: 2 }
+        var o2 = { c: 3 }
+        //把o1,o2的属性放在o身上 用for in遍历一个对象
+        Object.assign(o, o1, o2)
+        console.log(o)
+
+
+        function fn(option) {
+            let defaults = {
+                a: '默认1',
+                b: '默认2',
+                c: '默认3'
+            }
+            Object.assign(defaults, option)
+            console.log(defaults)
+        }
+
+        fn({
+            a: 1,
+            b: 2,
+            c: 3
+        })
+    </script>
+</body>
+
+</html>
