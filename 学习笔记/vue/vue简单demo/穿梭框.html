@@ -175,27 +175,25 @@
             },
 
             methods: {
-                //目标到源
-                targetToOrigin() {
-                    let targetChecked = this.targetData.filter(item => item.checked).map((item) => {
+
+                objToObj(obj1, obj2) {
+                    let targetChecked = obj1.filter(item => item.checked).map((item) => {
                         return {
                             ...item,  //将item.checked选中的复制 一份
                             checked: false
                         }
                     }) //[{},{}]
-                    this.originData.push(...targetChecked)
-                    this.targetData = this.targetData.filter((item) => !item.checked) //没选中的重置
+                    obj2.push(...targetChecked)
+                    return obj1.filter((item) => !item.checked)
+                },
+
+                //目标到源
+                targetToOrigin() {
+                    this.targetData = this.objToObj(this.targetData, this.originData)
                 },
                 //源到目标
                 originToTarget() {
-                    let originChecked = this.originData.filter(item => item.checked).map((item) => {
-                        return {
-                            ...item,  //将item.checked选中的复制 一份
-                            checked: false
-                        }
-                    }) //[{},{}]
-                    this.targetData.push(...originChecked)
-                    this.originData = this.originData.filter((item) => !item.checked) //没选中的重置
+                    this.originData = this.objToObj(this.originData, this.targetData)
                 }
             }
         })
