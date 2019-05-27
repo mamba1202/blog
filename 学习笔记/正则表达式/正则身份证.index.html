@@ -112,11 +112,11 @@
 
         var parity = [1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2];
 
-        varcode = val.substring(17);
+        var code = val.substring(17);
         if (p.test(val)) {
 
-            varsum = 0;
-            for (vari = 0; i < 17; i++) {
+            var sum = 0;
+            for (var i = 0; i < 17; i++) {
                 sum += val[i] * factor[i];
 
             }
@@ -133,12 +133,8 @@
 
 
     // 输出 true， 校验码相符
-    console.log(checkCode(
-        "11010519491231002X"
-    ));
+    console.log(checkCode("11010519491231002X"));
 
     // 输出 false， 校验码不符
-    console.log(checkCode(
-        "110105194912310021"
-    ));
+    console.log(checkCode("110105194912310021"));
 </script>
