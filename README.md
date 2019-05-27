@@ -12,8 +12,13 @@
 </thead>
 <tbody>
 <tr>
-<td>19.4.15</td>
-<td>[5%]</td>
+<td></td>
+<td>[]</td>
+<td><a href="https://github.com/mqyqingfeng/Blog">冴羽写博客的地方，预计写四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列。</a></td>
+</tr>
+<tr>
+<td></td>
+<td>[]</td>
 <td><a href="https://github.com/chokcoco/iCSS">谈谈一些有趣的 CSS 话题</a></td>
 </tr>
 <tr>
